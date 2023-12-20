@@ -17,7 +17,8 @@ public class KuaforController {
     private KuaforService kuaforService;
     @PostMapping()//ne zaman çagırılıcağını bilmesi lazım
     public ResponseEntity<KuaforDto> kuaforYarat(@RequestBody KuaforDto kuaforDto){//post olduğu request body den gelicek
-        KuaforDto kayitEdilmisPersonel=kuaforService."kuaforYarat(kuaforDto);
+        KuaforDto kayitEdilmisPersonel=kuaforService.kuaforYarat(kuaforDto);
         return new ResponseEntity<>(kayitEdilmisPersonel, HttpStatus.CREATED);
     }
+
 }
