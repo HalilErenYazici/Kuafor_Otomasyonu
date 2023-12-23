@@ -1,4 +1,4 @@
-package mapper;
+package com.example.kuaforrandevu.mapper;
 
 import com.example.kuaforrandevu.KuaforRandevuApplication;
 import com.example.kuaforrandevu.dto.KuaforDto;
