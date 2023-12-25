@@ -11,7 +11,11 @@ import lombok.Setter;
 @NoArgsConstructor
 public class KuaforDto {
     private long id;
+    private String kuaforSalonAd;
+
     private String isim;
     private  String soyisim;
+    private String sifre;
+
     private  String eposta;
 }

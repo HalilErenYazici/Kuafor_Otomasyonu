@@ -16,8 +16,10 @@ public class Kuafor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id ;
+    private String kuaforSalonAd;
     private String isim;
     private String soyisim;
+    private String sifre;
     @Column(name="eposta_id",nullable = false,unique = true)
 
     private String eposta;

@@ -9,4 +9,6 @@ public interface KuaforService {
     KuaforDto idIleGetir(Long kuaforId);
     List<KuaforDto> tumPersonelleriGetir();
     KuaforDto kuaforGuncelle(Long kuaforId,KuaforDto guncellenenKuafor);
+
+    void kuaforSil(Long kuaforId);
 }

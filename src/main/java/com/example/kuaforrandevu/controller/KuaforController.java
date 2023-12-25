@@ -43,4 +43,11 @@ public class KuaforController {
 
 
     }
+
+    //kuafor silme
+    @DeleteMapping("{id}")
+    public  ResponseEntity<String> kuaforSil(@PathVariable("id") Long kuaforId){
+        kuaforService.kuaforSil(kuaforId);
+        return  ResponseEntity.ok("Personel başarıyla silindi");
+    }
 }

@@ -49,7 +49,14 @@ public class KuaforServiceImpl implements KuaforService {
         kuaforRepository.save(kuafor);
         Kuafor veritabanindaGuncellenmisKuafor=kuaforRepository.save(kuafor);
         return KuaforMapper.mapToKuaforDto(veritabanindaGuncellenmisKuafor);
+ 
+    }
 
+    @Override
+    public void kuaforSil(Long kuaforId) {
+        Kuafor kuafor=kuaforRepository.findById(kuaforId)
+                .orElseThrow(()->new KaynakBulunamadiException("bu id ile kayıtlı bir personel bulunamadı. id: "+kuaforId));
+        kuaforRepository.deleteById(kuaforId);
     }
 
 
