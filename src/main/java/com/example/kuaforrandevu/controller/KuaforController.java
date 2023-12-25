@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @AllArgsConstructor
 @RestController
 @RequestMapping("/api/kuaforler")
@@ -24,5 +26,21 @@ public class KuaforController {
     public ResponseEntity<KuaforDto> idIleGetir(@PathVariable("id") Long kuaforId){
         KuaforDto kuaforDto=kuaforService.idIleGetir(kuaforId);
         return ResponseEntity.ok(kuaforDto);
+    }
+    //tüm personelleri getirme işlemi
+    @GetMapping
+    public ResponseEntity<List<KuaforDto>>tumKuaforleriGetir(){
+        List<KuaforDto> kuaforDtoList=kuaforService.tumPersonelleriGetir();
+        return ResponseEntity.ok(kuaforDtoList);
+    }
+
+    //personel güncelleme işlemi
+    @PutMapping("{id}")
+    public ResponseEntity<KuaforDto> kuaforGuncelle(@PathVariable("id") Long kuaforId,
+                                                    @RequestBody KuaforDto guncelKuaforDto){
+        KuaforDto kuaforDto=kuaforService.kuaforGuncelle(kuaforId,guncelKuaforDto);
+        return ResponseEntity.ok(kuaforDto);
+
+
     }
 }
