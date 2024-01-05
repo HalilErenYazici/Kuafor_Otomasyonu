@@ -1,6 +1,7 @@
 package com.example.kuaforrandevu.service.impl;
 
 import com.example.kuaforrandevu.dto.AdminDto;
+import com.example.kuaforrandevu.dto.KuaforDto;
 import com.example.kuaforrandevu.entity.Admin;
 import com.example.kuaforrandevu.entity.Kuafor;
 import com.example.kuaforrandevu.mapper.AdminMapper;

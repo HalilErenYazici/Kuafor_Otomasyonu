@@ -1,5 +1,6 @@
 package com.example.kuaforrandevu.dto;
 
+import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,13 +11,11 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class KuaforDto {
-    private long id;
-    private String kuaforSalonAd;
+public class MusteriDto {
+    private long id ;
+    private String Musteriisim;
+    private String Musterisoyisim;
+    private String Musterisifre;
 
-    private String isim;
-    private  String soyisim;
-    private String sifre;
-
-    private  String eposta;
+    private String eposta;
 }

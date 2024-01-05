@@ -51,3 +51,4 @@ public class KuaforController {
         return  ResponseEntity.ok("Personel başarıyla silindi");
     }
 }
+

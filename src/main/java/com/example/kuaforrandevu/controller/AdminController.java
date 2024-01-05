@@ -3,6 +3,7 @@ package com.example.kuaforrandevu.controller;
 import com.example.kuaforrandevu.dto.AdminDto;
 import com.example.kuaforrandevu.dto.KuaforDto;
 import com.example.kuaforrandevu.service.AdminService;
+import com.example.kuaforrandevu.service.KuaforService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,4 +22,5 @@ public class AdminController {
         AdminDto kayitEdilmisAdmin=adminService.adminYarat(adminDto);
         return new ResponseEntity<>(kayitEdilmisAdmin, HttpStatus.CREATED);
     }
+
 }

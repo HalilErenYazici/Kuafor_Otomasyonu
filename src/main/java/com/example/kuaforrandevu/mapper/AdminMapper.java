@@ -8,20 +8,16 @@ public class AdminMapper {
         return new AdminDto(
                 admin.getAdminId(),
                 admin.getAdminSifre(),
-                admin.getAdminAd(),
                 admin.getAdminMail(),
-                admin.getKullaniciAdi(),
-                admin.getAdminSoyad()
+                admin.getKullaniciAdi()
         );
     }
     public static Admin mapToAdmin(AdminDto adminDto){
         return new Admin(
                 adminDto.getAdminId(),
                 adminDto.getAdminSifre(),
-                adminDto.getAdminAd(),
                 adminDto.getAdminMail(),
-                adminDto.getKullaniciAdi(),
-                adminDto.getAdminSoyad()
+                adminDto.getKullaniciAdi()
         );
     }
 }

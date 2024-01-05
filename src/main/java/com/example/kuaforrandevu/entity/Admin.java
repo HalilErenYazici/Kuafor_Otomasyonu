@@ -17,8 +17,7 @@ public class Admin {
          @GeneratedValue(strategy = GenerationType.IDENTITY)
 
           private long adminId;
-        private String adminAd;
-        private String adminSoyad;
+
     private String adminSifre;
         @Column(nullable = false,unique = true)
         private String kullaniciAdi;
