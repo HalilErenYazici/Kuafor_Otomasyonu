@@ -10,7 +10,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AdminDto {
-    private Long adminId;
+    private long adminId;
+
     private String adminSifre;
     private String kullaniciAdi;
     private String adminMail;

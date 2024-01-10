@@ -22,7 +22,7 @@ public class Admin {
         @Column(nullable = false,unique = true)
         private String kullaniciAdi;
 
-        @Column(nullable = false,unique = true)
+        @Column(name="eposta_id",nullable = false,unique = true)
         private String adminMail;
 
 }

@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/adminler")
 public class AdminController {
     private AdminService adminService;
-    @PostMapping()//ne zaman çagırılıcağını bilmesi lazım
+    @PostMapping("/Create")//ne zaman çagırılıcağını bilmesi lazım
     public ResponseEntity<AdminDto> adminYarat(@RequestBody AdminDto adminDto){//post olduğu request body den gelicek
         AdminDto kayitEdilmisAdmin=adminService.adminYarat(adminDto);
         return new ResponseEntity<>(kayitEdilmisAdmin, HttpStatus.CREATED);
