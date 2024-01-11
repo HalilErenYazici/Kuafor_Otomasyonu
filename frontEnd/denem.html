@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Admin</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/denem.js"></script>
+
+
+</head>
+<body>
+	
+<!-- Page loading animation -->
+<div class="loader loader-bg">
+	<div class="loader-inner ball-pulse">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</div>
+
+<nav class="navbar navbar-expand-md fixed-top top-nav navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html"><strong>İn-Kuaför</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><img src="img/icons/menu.png"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto text-sm-center text-md-center">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Anasayfa <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="MusteriRandevular.html">Randevular</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="Iletisim.html">İletişim</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="Hakkimizda.html">Hakkımızda</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="Girişyap.html">Hesap</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	<div class="container">
+
+		<button id="kullaniciGetir">kullaniciGetir</button>
+<hr>
+<p id="kullaniciId"></p>
+<p id="kullaniciAdi"></p>
+<p id="kullaniciEposta"></p>
+
+<button class="btn btn-success btn-sm editBtn" id="#ekle">Ekle</button>
+<div class="container mt-8">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Adı Soyadı</th>
+				<th>Eposta</th>
+				<th>KuaforSalonAd</th>
+				<th>Sifre</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody id="kullaniciListesi"></tbody>
+	</table>
+</div>
+<!--<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		fetch('http://localhost:8080/api/kuaforler')
+			.then(response => response.json())
+			.then(json => {
+				console.log(json);
+
+				// Tablo içeriği için bir HTML oluştur
+				const kullaniciListesiHTML = json.map(kullanici => `
+					<tr>
+						<td>${kullanici.id}</td>
+						<td>${kullanici.isim} ${kullanici.soyisim}</td>
+						<td>${kullanici.eposta}</td>
+					</tr>
+				`).join('');
+
+				// Oluşturulan HTML içeriğini kullaniciListesi tbody'ine ekleyin
+				document.getElementById("kullaniciListesi").innerHTML = kullaniciListesiHTML;
+			});
+	});
+</script>
+-->
+
+
+   <!-- Kullanıcı güncelleme formu -->
+   <div id="guncelleForm" style="display: none;">
+	<h3>Kullanıcı Güncelle</h3>
+	<form class="form-horizontal register-form">
+		
+		<input type="hidden" id="guncelleId" value="">
+		<div class="row form-group">
+			<div class="col-sm-1"><label for="guncelleIsim">İsim:</label>	</div>
+			<div class="col-sm-10"><input type="text" id="guncelleIsim" required>
+			</div>
+		</div>
+		<label for="guncelleSoyisim">Soyisim:</label>
+		<input type="text" id="guncelleSoyisim" required>
+		<label for="guncelleEposta">Eposta:</label>
+		<input type="email" id="guncelleEposta" required>
+		<label for="guncelleSalonAd">Salon adı:</label>
+		<input type="email" id="guncelleSalonAd" required>
+		<label for="guncelleSifre">Şifre:</label>
+		<input type="email" id="guncelleSifre" required>
+		<button type="button" class="btn btn-primary" id="guncelleBtn">Güncelle</button>
+		
+	</form>
+</div>
+	</div>
+
+<!-- index.html -->
+
+<!-- ... -->
+
+<!-- Yeni kullanıcı ekleme formu -->
+<div id="ekleForm">
+    <h3 class="mb-3">Yeni Kullanıcı Ekle</h3>
+    <form class="form-horizontal">
+        <div class="mb-3">
+            <label for="ekleIsim" class="col-sm-2 col-form-label">İsim:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="ekleIsim" required>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="ekleSoyisim" class="col-sm-2 col-form-label">Soyisim:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="ekleSoyisim" required>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="ekleEposta" class="col-sm-2 col-form-label">Eposta:</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="ekleEposta" required>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="ekleSalonAd" class="col-sm-2 col-form-label">Kuafor Salon Adı:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="ekleSalonAd" required>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="ekleSifre" class="col-sm-2 col-form-label">Şifre:</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="ekleSifre" required>
+            </div>
+        </div>
+        <div class="col-sm-10 offset-sm-2">
+            <button type="button" class="btn btn-success" id="ekleFormBtn">Ekle</button>
+        </div>
+    </form>
+</div>
+<div id="error-message" style="color: red;"></div>
+
+<!-- ... -->
+
+
+<!-- Bootstrap JS (Optional) -->
+<script  src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+<script src="js/bootstrap.min.js" ></script>
+<script async deffer type="text/javascript" src="https://maps.google.com/maps/api/js?key= AIzaSyB52BfJHBtqiqYBn_D4ZUqujiWxAOiRyTc&callback=initMap"></script>
+<script src="js/gmap-custom.js" ></script>
+<script src="js/core.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+
+<head>
+	<title>Anasayfa</title>
+</head>
+<!-- bootstrap Style CSS File -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Custom Style CSS File -->
+<link rel="stylesheet" type="text/css" href="css/custom-style.css">
+<link rel="stylesheet" type="text/css" href="css/loaders.css"/>
+<!-- Font-Awesome Style CSS File -->
+<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+
+<body>
+
+<!-- Page loading animation -->
+<div class="loader loader-bg">
+	<div class="loader-inner ball-pulse">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</div>
+
+<!-- Top navigation -->
+<nav class="navbar navbar-expand-md fixed-top top-nav navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><strong>İn-Kuaför</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><img src="img/icons/menu.png"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto text-sm-center text-md-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Anasayfa <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="MusteriRandevular.html">Randevular</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Iletisim.html">İletişim</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Hakkimizda.html">Hakkımızda</a>
+          </li>
+		    <li class="nav-item">
+		        <a class="nav-link" href="Girişyap.html">Hesap</a>
+		    </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+<!-- Content block 1 -->
+<div class="container ">
+</br>
+</br>
+<br>
+<br>
+<br>
+    <!-- Kuaför Kartları -->
+    <div class="row">
+        <!-- Kuaför X -->
+        <div class="col-md-12">
+            <div class="card stylist-card">
+                <div class="card-header text-center">
+                    <h5 class="text-center">Randevular</h5>
+                </div>
+                <div class="card-body">
+                    <h6 class="text-center text-dark">Çalışma Saatlerimiz:</h6>
+                    <h6 class="text-center text-dark">10:00 - 19:00</h6>
+                    <br>
+                    <h6 class="text-center text-dark">*Pazar Günleri Kapalıyız*</h6>
+                    <br>
+                    <button class="btn btn-dark btn-block" data-toggle="modal" data-target="#appointmentModalX">Randevu Al</button>
+                    <button class="btn btn-outline-dark btn-block mt-2" data-toggle="modal" data-target="#appointmentsModalX">Randevularımı Görüntüle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS ve jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Randevu Alma Modalı - Kuaför X -->
+<div class="modal fade" id="appointmentModalX" tabindex="-1" role="dialog" aria-labelledby="appointmentModalXLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="appointmentModalXLabel">Randevu Al - Kuaför X</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Randevu alma formu buraya gelecek -->
+                <form>
+                    <div class="form-group">
+                        <label for="serviceSelectionX">İşlem Seçin:</label>
+                        <select class="form-control" id="serviceSelectionX">
+                            <option>Saç Kesimi</option>
+                            <option>Sakal Kesimi</option>
+                            <option>Maske Yapımı</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="serviceSelectionX">Kuaför Seçin:</label>
+                        <select class="form-control" id="serviceSelectionX">
+                            <option>Halil Eren Yazıcı</option>
+                            <option>Berkay Gürcan</option>
+                            <option>Kadir Korkmaz</option>
+                            <option>Baha Can</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="serviceSelectionX">Gün Seçin:</label>
+                        <select class="form-control" id="serviceSelectionX">
+                            <option>Pazartesi</option>
+                            <option>Salı</option>
+                            <option>Çarşamba</option>
+                            <option>Perşembe</option>
+                            <option>Cuma</option>
+                            <option>Cumartesi</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="serviceSelectionX">Saat Seçin:</label>
+                        <select class="form-control" id="serviceSelectionX">
+                            <option>10:00 - 11:00</option>
+                            <option>12:00 - 13:00</option>
+                            <option>14:00 - 15:00</option>
+                            <option>16:00 - 17:00</option>
+                            <option>18:00 - 19:00</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="noteX">Notunuz:</label>
+                        <textarea class="form-control" id="noteX" rows="3"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-dark btn-block" onclick="scheduleAppointment('X')">Randevu Al</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Randevularımı Görüntüle Modalı - Kuaför X -->
+<div class="modal fade" id="appointmentsModalX" tabindex="-1" role="dialog" aria-labelledby="appointmentsModalXLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="appointmentsModalXLabel">Randevularım - Kuaför X</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Müşteri randevularını dinamik olarak buraya ekleyebilirsiniz -->
+                <ul class="appointments-list">
+                    <li class="appointment-item">12 Mart 2023 - Saç Kesimi</li>
+                    <li class="appointment-item">15 Mart 2023 - Fön</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    function scheduleAppointment(stylistId) {
+        // Burada randevu alma işlemleri yapılabilir
+        alert("Randevu al butonuna tıklandı - Kuaför: " + stylistId);
+    }
+    
+    
+</script>
+
+
+
+
+<!-- Javascript Files  -->
+<script  src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+<script src="js/bootstrap.min.js" ></script>
+<script async deffer type="text/javascript" src="https://maps.google.com/maps/api/js?key= AIzaSyB52BfJHBtqiqYBn_D4ZUqujiWxAOiRyTc&callback=initMap"></script>
+<script src="js/gmap-custom.js" ></script>
+<script src="js/core.js"></script>
+</body>
+</html>
+

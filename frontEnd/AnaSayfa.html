@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berber Salonu</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-pzjw8CSaPwFgs3eT1LlMqjxKhIs9X/9m+D8tLXcPLxU7fsF5FfSVDB+znu6a18II" crossorigin="anonymous">
+        <script type="text/javascript">
+          var title = document.title;
+          var alttitle = "Seni Bekliyoruz";
+          window.onblur = function () { document.title = alttitle; };
+          window.onfocus = function () { document.title = title; };
+        </script>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">İnegöl Berber</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
+              <li class="nav-item"><a class="nav-link" href="MusteriRandevular.html">Randevular</a></li>
+              <li class="nav-item"><a class="nav-link" href="Hakkimizda.html">Hakkımızda</a></li>
+              <li class="nav-item"><a class="nav-link" href="Iletisim.html">İletişim</a></li>
+              <li class="nav-item"><a class="nav-link" href="Girişyap.html">Hesap</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+ 
+      <style>
+        body {
+          padding-top: 60px; /* Add padding to the body to accommodate the navbar height */
+        }
+      
+        .navbar {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 999;
+        }
+      </style>
+      
+    <!--Content-->
+    <div class="jumbotron text-center" style="background-image: url('image/index_bg.jpg'); height: 100vh; width: 100vw;">
+        <h1>İnegöl Berber</h1>
+        <p class="lead">Salonumuzda size profesyonel hizmetler sunuyoruz</p>
+        <br>
+        <div class="col-md-12">
+              <div class="card-body">
+                <br>
+                <br>
+                <br>
+                  <button class="btn text-white bg-light" data-toggle="modal"><a href="#kesfet"><h4> -> Keşfet <- </h4></a></button>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div  id="kesfet" class="services">
+        <div class="container">
+            <div class="row services">
+                <div class="col-lg-4 kesimFoto service-item">
+                    <i class="fas fa-cut service-icon"></i>
+                    <h3 class="service-title">Saç Kesimi</h3>
+                    <p>Anatomik saç kesimine göre saç kesimleri</p>
+                    <p class="text-center">
+                        <a href="MusteriRandevular.html"><img src="image/sac_bakimi.jpg"></a>
+                    </p>
+                    <p class="text-center">
+                    </p>
+                </div>
+                <div class="col-lg-4 kesimFoto service-item">
+                    <i class="fas fa-beard service-icon"></i>
+                    <h3 class="service-title">Sakal Bakımı</h3>
+                    <p>İsteğinize uygun sakal kesimiyle karşınızdayız</p>
+                    <p class="text-center">
+                        <a href="MusteriRandevular.html"><img src="image/sakal_bakimi.jpg"></a>
+                    </p>
+                </div>
+                <div class="col-lg-4 kesimFoto service-item">
+                    <i class="fas fa-shower service-icon"></i>
+                    <h3 class="service-title">Maske Hizmeti</h3>
+                    <p>Cilt yapınıza göre yüz bakımı ve maske hizmeti</p>
+                    <p class="text-center">
+                        <a href="MusteriRandevular.html"><img src="image/maske_hizmeti.jpg"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <div class="footer">
+        <p class="text-center"> Kemalpaşa Mahallesi, Okullar Caddesi, No:5, İnegöl/Bursa</p>
+            <p class="text-center">[inegolberber@gmail.com]  ---  [0224 444 5 789]</p>
+        <style>
+            .footer {
+                height: 100px;
+                width:100%;
+                margin:0 auto;
+                bottom: 0;
+            }
+
+          </style>
+    </div>
+</body>
+
+</html>

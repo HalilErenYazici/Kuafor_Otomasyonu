@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>İletişim</title>
+</head>
+<!-- bootstrap Style CSS File -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Custom Style CSS File -->
+<link rel="stylesheet" type="text/css" href="css/custom-style.css">
+<link rel="stylesheet" type="text/css" href="css/loaders.css"/>
+<!-- Font-Awesome Style CSS File -->
+<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+<body>
+
+<!-- Page loading animation -->
+<div class="loader loader-bg">
+	<div class="loader-inner ball-pulse">
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</div>
+
+<nav class="navbar navbar-expand-md fixed-top top-nav navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html"><strong>İn-Kuaför</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><img src="img/icons/menu.png"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto text-sm-center text-md-center">
+        <li class="nav-item">
+			<a class="nav-link" href="index.html">Anasayfa <span class="sr-only">(current)</span></a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="MusteriRandevular.html">Randevular</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="Iletisim.html">İletişim</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="Hakkimizda.html">Hakkımızda</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="Girişyap.html">Hesap</a>
+		  </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="contact" class="contact-section h-100 bg-dark">
+	<div id="map" class="bg-overlay"></div>
+	
+  <br>
+  <br>
+  <br>
+	<div class="container py-5">
+		<div class="col-lg-8 col-md-6 col-sm-10 form-sec bg-white my-5 p-5 mx-auto">
+				<form>
+					<p class="text-center"><b>Kemalpaşa Mahallesi Okullar Caddesi İnegöl/Bursa</b></p>
+					<p class="text-center"><b>Telefon: 0216 216 1616</b></p>
+					<br>
+				  <h2 class="mb-4">Bize Ulaşın!</h2>
+				  <div class="row">
+				  	<div class="col-md-6">
+						<div class="form-group">
+							<label class="sr-only" for="formGroupExampleInput">Ad Soyad</label>
+							<input class="form-control" id="formGroupExampleInput" placeholder="Ad Soyad" onfocus="this.placeholder=''" onblur="this.placeholder='Ad Soyad'" type="text">
+						</div>
+				  	</div>
+				  	<div class="col-md-6">
+						<div class="form-group">
+							<label class="sr-only" for="formGroupExampleInput2">Telefon Numarası</label>
+							<input class="form-control" id="formGroupExampleInput2" placeholder="Telefon Numarası" onfocus="this.placeholder=''" onblur="this.placeholder='Telefon Numarası'" type="text">
+						</div>		
+				  	</div>
+				  </div>
+				  <div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="sr-only" for="formGroupExampleInput2">Email Adresi</label>
+							<input class="form-control" id="formGroupExampleInput2" placeholder="Email Adresi" onfocus="this.placeholder=''" onblur="this.placeholder='Email Adresi'" type="email">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="sr-only" for="formGroupExampleInput2">Adres</label>
+							<input class="form-control" id="formGroupExampleInput2" placeholder="Adres" onfocus="this.placeholder=''" onblur="this.placeholder='Adres'" type="email">
+						</div>
+					</div>
+				  </div>
+				  <div class="row">
+				  	<div class="col-md-12">
+						<div class="form-group">
+							<label class="sr-only" for="formGroupExampleInput2">Mesaj</label>
+							<textarea class="form-control" placeholder="Mesajınızı Buraya Giriniz" rows="4" onfocus="this.placeholder=''" onblur="this.placeholder='Mesajınızı Buraya Giriniz'"></textarea>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-primary btn-capsul px-4">Onayla</button>
+						</div>		
+				  	</div>
+				  </div>
+			  </form>
+			</div>
+	</div>
+</section>
+
+<!-- footer Block -->
+<div class="copy-footer bg-primary py-2">
+	<div class="container text-center text-light">
+		&copy; <a href="http://grafreez.com" target="_blank">Grafreez.com</a> <span id="year"></span>. All rights reserved. Created with <i class="fa fa-heart"></i>
+	</div>
+</div>
+
+
+
+<!-- Javascript Files  -->
+<script  src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+<script src="js/bootstrap.min.js" ></script>
+<script async deffer type="text/javascript" src="https://maps.google.com/maps/api/js?key= AIzaSyB52BfJHBtqiqYBn_D4ZUqujiWxAOiRyTc&callback=initMap"></script>
+<script src="js/gmap-custom.js" ></script>
+<script src="js/core.js"></script>
+</body>
+</html>
