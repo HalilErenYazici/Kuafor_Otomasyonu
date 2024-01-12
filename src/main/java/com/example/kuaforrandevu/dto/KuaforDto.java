@@ -12,7 +12,6 @@ import lombok.Setter;
 
 public class KuaforDto {
     private long id;
-    private String kuaforSalonAd;
 
     private String isim;
     private  String soyisim;

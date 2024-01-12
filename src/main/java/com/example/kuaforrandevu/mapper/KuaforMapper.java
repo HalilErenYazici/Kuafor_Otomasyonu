@@ -8,7 +8,6 @@ public class KuaforMapper {
     public static KuaforDto mapToKuaforDto(Kuafor kuafor){
         return new KuaforDto(
                 kuafor.getId(),
-                kuafor.getKuaforSalonAd(),
                 kuafor.getIsim(),
                 kuafor.getSoyisim(),
                 kuafor.getSifre(),
@@ -18,7 +17,6 @@ public class KuaforMapper {
     public static Kuafor mapToKuafor(KuaforDto kuaforDto){
         return new Kuafor(
                 kuaforDto.getId(),
-                kuaforDto.getKuaforSalonAd(),
 
                 kuaforDto.getIsim(),
                 kuaforDto.getSoyisim(),

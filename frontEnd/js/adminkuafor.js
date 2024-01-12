@@ -1,3 +1,22 @@
+function start() {
+    var panel = document.getElementById('ekleForm');
+    panel.style.display = 'none';
+}
+function panelEkle(){
+    $('#ekleForm').show();
+    $('#goruntule').hide();
+    $('#kuaforEkleButton').hide();
+}
+function ekleIptal(){
+    $('#ekleForm').hide();
+    $('#guncelleForm').hide();
+    $('#goruntule').show();
+    $('#kuaforEkleButton').show();
+
+}
+
+
+
 $(document).ready(function () {
     function refreshTable() {
         $.ajax({
@@ -9,10 +28,8 @@ $(document).ready(function () {
 
                 const kullaniciListesiHTML = json.map(kullanici => `
                     <tr>
-                        <td>${kullanici.id}</td>
                         <td>${kullanici.isim} ${kullanici.soyisim}</td>
                         <td>${kullanici.eposta}</td>
-                        <td>${kullanici.kuaforSalonAd}</td>
                         <td>${kullanici.sifre}</td>
 
 
@@ -48,11 +65,14 @@ $(document).ready(function () {
             type: 'DELETE',
             success: function () {
                 console.log(`Kullanıcı ID ${id} silindi.`);
+                alert("Kullanıcı Silindi. Devam Etmek İçin Tıkla.");
+                $('#guncelleForm').hide();
                 refreshTable();
             },
             error: function (error) {
                 console.error(`Kullanıcı silme hatası:`, error);
             }
+            
         });
     }
 
@@ -67,10 +87,13 @@ $(document).ready(function () {
                 $('#guncelleIsim').val(kullanici.isim);
                 $('#guncelleSoyisim').val(kullanici.soyisim);
                 $('#guncelleEposta').val(kullanici.eposta);
-                $('#guncelleSalonAd').val(kullanici.kuaforSalonAd);
                 $('#guncelleSifre').val(kullanici.sifre);
 
                 $('#guncelleForm').show();
+                $('#ekleForm').hide();
+                $('#goruntule').hide();
+                $('#kuaforEkleButton').hide();
+
             },
             error: function (error) {
                 console.error('Kullanıcı bilgisi getirme hatası:', error);
@@ -84,10 +107,7 @@ $(document).ready(function () {
             isim: $('#guncelleIsim').val(),
             soyisim: $('#guncelleSoyisim').val(),
             eposta: $('#guncelleEposta').val(),
-            kuaforSalonAd: $('#guncelleSalonAd').val(),
             sifre: $('#guncelleSifre').val()
-
-            
 
         };
 
@@ -98,8 +118,11 @@ $(document).ready(function () {
             data: JSON.stringify(guncellenmisKullanici),
             success: function () {
                 console.log(`Kullanıcı ID ${kullaniciId} güncellendi.`);
+                alert("Kullanıcı Güncellendi. Devam Etmek İçin Tıkla.")
                 refreshTable();
                 $('#guncelleForm').hide();
+                $('#kuaforEkleButton').show();
+                $('#goruntule').show();
             },
             error: function (error) {
                 console.error('Kullanıcı güncelleme hatası:', xhr.responseJSON.message);
@@ -117,18 +140,11 @@ $(document).ready(function () {
     refreshTable();
 
     $(document).ready(function () {
-        // ...
-    
-        $('#ekleBtn').click(function () {
-            $('#ekleForm').show();
-        });
-    
         $('#ekleFormBtn').click(function () {
             const yeniKullanici = {
                 isim: $('#ekleIsim').val(),
                 soyisim: $('#ekleSoyisim').val(),
                 eposta: $('#ekleEposta').val(),
-                kuaforSalonAd: $('#ekleSalonAd').val(),
                 sifre: $('#ekleSifre').val()
             };
     
@@ -138,14 +154,18 @@ $(document).ready(function () {
                 contentType: 'application/json',
                 data: JSON.stringify(yeniKullanici),
                 success: function () {
+                    
                     console.log('Yeni kullanıcı eklendi.');
-                    refreshTable();
                     $('#ekleForm').hide();
+                    $('#kuaforEkleButton').show();
+                    $('#goruntule').show();
+                    refreshTable();
                 },
                 error: function (xhr, textStatus, errorThrown) {
                     console.error('Yeni kullanıcı ekleme hatası:', xhr.responseJSON.message);
     
                     if (xhr.status === 500 && xhr.responseJSON.error === 'EmailAlreadyExists') {
+                        alert("Error: bu mail adresi kullanılıyor farklı mail gir")
                         $('#error-message').text('Error: bu mail adresi kullanılıyor farklı mail gir');
                     } else {
                         $('#error-message').text('Error: ' + xhr.responseJSON.message);
@@ -154,8 +174,6 @@ $(document).ready(function () {
                 }
             });
         });
-    
-        // ...
     });
     
 

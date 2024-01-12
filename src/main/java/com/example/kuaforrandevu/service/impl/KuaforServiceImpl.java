@@ -46,6 +46,7 @@ public class KuaforServiceImpl implements KuaforService {
         kuafor.setIsim(guncellenenKuafor.getIsim());
         kuafor.setSoyisim(guncellenenKuafor.getSoyisim());
         kuafor.setEposta(guncellenenKuafor.getEposta());
+        kuafor.setSifre(guncellenenKuafor.getSifre());
         kuaforRepository.save(kuafor);
         Kuafor veritabanindaGuncellenmisKuafor=kuaforRepository.save(kuafor);
         return KuaforMapper.mapToKuaforDto(veritabanindaGuncellenmisKuafor);

@@ -1,0 +1,44 @@
+body {
+    background-color: #000000;
+    color: #000000;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    color: #000000;
+}
+
+form input,
+form button {
+    margin-top: 10px;
+}
+
+#error-message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #000000;
+}
+
+.btn-primary {
+    background-color: #000000;
+    border: 1px solid #000000;
+    color: rgb(0, 0, 0)000;
+}
+
+.btn-primary:hover {
+    background-color: #217dbb;
+    border: 1px solid #217dbb;
+}
