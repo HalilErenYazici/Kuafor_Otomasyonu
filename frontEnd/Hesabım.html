@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <title>Hesap Aç</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/hesap.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Custom Style CSS Files -->
+    <link rel="stylesheet" type="text/css" href="css/custom-style.css">
+    <link rel="stylesheet" type="text/css" href="css/loaders.css" />
+
+    <!-- Font-Awesome Style CSS File -->
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div>
+        <!-- Page loading animation -->
+    <div class="loader loader-bg">
+        <div class="loader-inner ball-pulse">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-md fixed-top top-nav navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><strong>İn-Kuaför</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><img src="img/icons/menu.png"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto text-sm-center text-md-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Anasayfa <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="MusteriRandevular.html">Randevular</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Iletisim.html">İletişim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Hakkimizda.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Girişyap.html">Hesap</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 style="text-align: center;"  class="text-align:center">PROFİL SAYFASI</h1>
+    <hr size="11px">
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mt-4">
+                <h3>Profil</h3>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#randevularım" id="randevularım">Randevularım</a></li>
+                    <li class="list-group-item"><button id="bilgilerim"><a href="#uruneksik" >Bilgilerim</a></button>
+                </ul>
+            </div>
+
+            <div class="col-md-8">
+                <div class=" mt-5" id="randevu" style="display: none;">
+                    <h2 class="text-center">Randevu Tablosu</h2>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Tarih</th>
+                            <th scope="col">Saat</th>
+                            <th scope="col">Müşteri Adı</th>
+                            <th scope="col">Kuaför Adı</th>
+                            <th scope="col">Durum</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>2024-01-01</td>
+                            <td>14:00</td>
+                            <td>Ahmet Yılmaz</td>
+                            <td>Kuafor A</td>
+                            <td>Onaylandı</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>2024-01-02</td>
+                            <td>15:30</td>
+                            <td>Ayşe Demir</td>
+                            <td>Kuafor B</td>
+                            <td>Beklemede</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>2024-01-03</td>
+                            <td>16:45</td>
+                            <td>Mehmet Kaya</td>
+                            <td>Kuafor C</td>
+                            <td>İptal Edildi</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+
+            
+
+                <div class="container mt-4 "  >
+                    <p id="kullaniciListesi" style="display: none;" class="text-center"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        $("#bilgilerim").click(function(){
+           $("#kullaniciListesi").show(1000 );
+           $("#randevu").hide(1000);
+
+           
+
+        });
+        $("#randevularım").click(function(){
+           $("#randevu").show(1000);
+           $("#kullaniciListesi").hide(1000);
+
+           
+
+        });
+        </script><br /><br />
+
+    <div id="guncelleForm" style="display: none;" class="container mt-4">
+        <h3>Kullanıcı Güncelle</h3>
+        <form class="form-horizontal register-form">
+            <input type="hidden" id="guncelleId" value="">
+            <div class="form-group row">
+                <label for="guncelleIsim" class="col-sm-1 col-form-label"> Müşteri İsim:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="guncelleIsim" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="guncelleSoyisim" class="col-sm-1 col-form-label"> Müsteri Soyisim:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="guncelleSoyisim" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="guncelleEposta" class="col-sm-1 col-form-label"> Müşteri Eposta:</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="guncelleEposta" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="guncelleSifre" class="col-sm-1 col-form-label"> Müşteri Şifre:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="guncelleSifre" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="button" class="btn btn-primary" id="guncelleBtn">Güncelle</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <script async defer type="text/javascript" src="https://maps.google.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script>
+    <script src="js/gmap-custom.js"></script>
+    <script src="js/core.js"></script>
+</body>
+
+</html>

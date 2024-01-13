@@ -11,4 +11,6 @@ public interface KuaforService {
     KuaforDto kuaforGuncelle(Long kuaforId,KuaforDto guncellenenKuafor);
 
     void kuaforSil(Long kuaforId);
+
+
 }

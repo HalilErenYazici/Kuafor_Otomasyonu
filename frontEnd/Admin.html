@@ -8,6 +8,8 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="js/adminkuafor.js"></script>
     <script src="js/halilDeneme.js"></script>
+    <script src="js/bizeUlas.js"></script>
+
     <link rel="stylesheet" href="halilDeneme.css">
 
 </head>
@@ -183,8 +185,37 @@
                                     <th></th>
                                 </tr>
                             </thead>
-                            <tbody id="musteriListesi">
+                            <tbody id="musteriListesi" style="max-height: 70vh;overflow-y: scroll;">
                                 <!-- Buraya kullanıcı listesi gelecek -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="goruntuleBizeUlas" class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        Bize Ulaş Listesi
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Adı Soyadı</th>
+                                    <th>email</th>
+                                    <th>telefon</th>
+                                    <th>adres</th>
+                                    <th>mesaj</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="bizeulaslistesi" style="max-height: 70vh;overflow-y: scroll;">
+                                <!-- bize ulas listesi gelecek-->
                             </tbody>
                         </table>
                     </div>
