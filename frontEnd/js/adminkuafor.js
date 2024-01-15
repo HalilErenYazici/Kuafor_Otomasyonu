@@ -3,15 +3,15 @@ function start() {
     panel.style.display = 'none';
 }
 function panelEkle(){
-    $('#ekleForm').show();
-    $('#goruntule').hide();
-    $('#kuaforEkleButton').hide();
+    $('#ekleForm').show(1000);
+    $('#goruntule').hide(1000);
+    $('#kuaforEkleButton').hide(1000);
 }
 function ekleIptal(){
-    $('#ekleForm').hide();
-    $('#guncelleForm').hide();
-    $('#goruntule').show();
-    $('#kuaforEkleButton').show();
+    $('#ekleForm').hide(1000);
+    $('#guncelleForm').hide(1000);
+    $('#goruntule').show(1000);
+    $('#kuaforEkleButton').show(1000);
 
 }
 
@@ -89,10 +89,10 @@ $(document).ready(function () {
                 $('#guncelleEposta').val(kullanici.eposta);
                 $('#guncelleSifre').val(kullanici.sifre);
 
-                $('#guncelleForm').show();
-                $('#ekleForm').hide();
-                $('#goruntule').hide();
-                $('#kuaforEkleButton').hide();
+                $('#guncelleForm').show(1000);
+                $('#ekleForm').hide(1000);
+                $('#goruntule').hide(1000);
+                $('#kuaforEkleButton').hide(1000);
 
             },
             error: function (error) {
@@ -120,9 +120,9 @@ $(document).ready(function () {
                 console.log(`Kullanıcı ID ${kullaniciId} güncellendi.`);
                 alert("Kullanıcı Güncellendi. Devam Etmek İçin Tıkla.")
                 refreshTable();
-                $('#guncelleForm').hide();
-                $('#kuaforEkleButton').show();
-                $('#goruntule').show();
+                $('#guncelleForm').hide(1000);
+                $('#kuaforEkleButton').show(1000);
+                $('#goruntule').show(1000);
             },
             error: function (error) {
                 console.error('Kullanıcı güncelleme hatası:', xhr.responseJSON.message);
@@ -156,9 +156,9 @@ $(document).ready(function () {
                 success: function () {
                     
                     console.log('Yeni kullanıcı eklendi.');
-                    $('#ekleForm').hide();
-                    $('#kuaforEkleButton').show();
-                    $('#goruntule').show();
+                    $('#ekleForm').hide(1000);
+                    $('#kuaforEkleButton').show(1000);
+                    $('#goruntule').show(1000);
                     refreshTable();
                 },
                 error: function (xhr, textStatus, errorThrown) {

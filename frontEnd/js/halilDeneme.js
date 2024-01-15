@@ -81,8 +81,7 @@ $(document).ready(function () {
                         <td>${kullanici.musterisifre}</td>
 
 
-                        <td><button class="btn btn-danger btn-sm deleteBtn" data-id="${kullanici.id}">Sil</button>
-                        <button class="btn btn-primary btn-sm editBtn" data-id="${kullanici.id}">Düzenle</button>
+                        <td><button class="btn btn-danger btn-sm deleteBtn" data-id="${kullanici.id}">-X- </button>
 
                         </td>
 
