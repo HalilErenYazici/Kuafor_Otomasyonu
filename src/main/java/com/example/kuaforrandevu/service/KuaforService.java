@@ -1,6 +1,7 @@
 package com.example.kuaforrandevu.service;
 
 import com.example.kuaforrandevu.dto.KuaforDto;
+import com.example.kuaforrandevu.entity.Kuafor;
 
 import java.util.List;
 

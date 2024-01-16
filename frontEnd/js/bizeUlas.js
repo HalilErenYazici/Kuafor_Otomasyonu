@@ -3,6 +3,7 @@ $(document).ready(function () {
 
     $('#onayla').click(function () {
         const yeniBizeUlas = {
+            
             adsoyad: $('#adsoyad').val(),
             email: $('#Email').val(),
             telefon: $('#telefon').val(),
@@ -29,57 +30,65 @@ $(document).ready(function () {
     // Burada birinci document.ready fonksiyonu kapatılıyor
 
     // İkinci document.ready fonksiyonu başlatılıyor
-    $(document).ready(function () {
-        function refreshTable() {
-            $.ajax({
-                url: 'http://localhost:8080/api/bizulasin',
-                type: 'GET',
-                dataType: 'json',
-                success: function (json) {
-                    console.log(json);
-
-                    const kullaniciListesiHTML = json.map(kullanici => `
-                        <tr>
-                            <td>${kullanici.adsoyad}</td>
-                            <td>${kullanici.email}</td>
-                            <td>${kullanici.telefon}</td>
-                            <td>${kullanici.adres}</td>
-                            <td>${kullanici.mesaj}</td>
-                            <td><button class="btn btn-danger btn-sm deleteBtn" data-id="${kullanici.id}">Sil</button></td>
-                        </tr>
-                    `).join('');
-
-                    $('#bizeulaslistesi').html(kullaniciListesiHTML);
-
-                    $('.deleteBtn').click(function () {
-                        const kullaniciId = $(this).data('id');
-                        deleteKullanici(kullaniciId);
-                    });
-                },
-                error: function (error) {
-                    console.error('Veri çekme hatası:', error);
-                }
-            });
-        }
-
-        function deleteKullanici(id) {
-            $.ajax({
-                url: `http://localhost:8080/api/bizulasin/${id}`,
-                type: 'DELETE',
-                success: function () {
-                    console.log(`Kullanıcı ID ${id} silindi.`);
-                    alert("Kullanıcı Silindi. Devam Etmek İçin Tıkla.")
-                    $('#guncelleForm').hide();
-                    refreshTable(); // Kullanıcıyı sildikten sonra tabloyu güncelle
-                },
-                error: function (error) {
-                    console.error(`Kullanıcı silme hatası:`, error);
-                }
-            });
-        }
-
-    }); // İkinci document.ready fonksiyonu kapatılıyor
+   //document.ready fonksiyonu kapatılıyor
 
     // Burada başka kodlar olabilir...
 
 }); // En dıştaki document.ready fonksiyonu kapatılıyor
+$(document).ready(function () {
+    function refreshTable() {
+        $.ajax({
+            url: 'http://127.0.0.1:8080/api/bizulasin',
+            type: 'GET',
+            dataType: 'json',
+            success: function (json) {
+                console.log(json);
+
+                const kullaniciListesiHTML = json.map(kullanici => `
+                    <tr>
+                        <td>${kullanici.adsoyad}</td>
+                        <td>${kullanici.email}</td>
+                        <td>${kullanici.telefon}</td>
+                        <td>${kullanici.adres}</td>
+                        <td>${kullanici.mesaj}</td>
+
+
+                        <td><button class="btn btn-danger btn-sm deleteBtn" data-id="${kullanici.id}">X</button>
+
+                        </td>
+
+                    </tr>
+                `).join('');
+
+                $('#bizeliste').html(kullaniciListesiHTML);
+
+                $('.deleteBtn').click(function () {
+                    const kullaniciId = $(this).data('id');
+                    deleteKullanici(kullaniciId);
+                });
+              
+   
+            },
+            error: function (error) {
+                console.error('Veri çekme hatası:', error);
+            }
+        });
+    }
+
+    function deleteKullanici(id) {
+        $.ajax({
+            url: `http://localhost:8080/api/bizulasin/${id}`,
+            type: 'DELETE',
+            success: function () {
+                console.log(`Kullanıcı ID ${id} silindi.`);
+                refreshTable();
+            },
+            error: function (error) {
+                console.error(`Kullanıcı silme hatası:`, error);
+            }
+        });
+    }
+
+    refreshTable();
+  
+});

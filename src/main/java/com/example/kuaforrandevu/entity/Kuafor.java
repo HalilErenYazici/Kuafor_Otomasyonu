@@ -19,6 +19,7 @@ public class Kuafor {
     private String isim;
     private String soyisim;
     private String sifre;
+    private String saat;
     @Column(name="eposta_id",nullable = false,unique = true)
 
     private String eposta;

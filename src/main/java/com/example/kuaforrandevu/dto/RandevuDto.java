@@ -9,14 +9,13 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+public class RandevuDto {
+    private long id ;
+    private String Musteriisim;
+    private String KuaforAd;
 
-public class KuaforDto {
-    private long id;
-
-    private String isim;
-    private  String soyisim;
-    private String sifre;
+    private String islem;
+    private String gun;
     private String saat;
-
-    private  String eposta;
+    private String onay;
 }

@@ -63,8 +63,8 @@
         <h2 class="login-title">Giriş Yap</h2>
         <form class="login-form">
             <div class="form-group">
-                <label for="username">Kullanıcı Adı</label>
-                <input type="text" class="form-control" required id="username" placeholder="Kullanıcı Adı">
+                <label for="eposta">E posta</label>
+                <input type="text" class="form-control" required id="eposta" placeholder="Kullanıcı Adı">
             </div>
             <div class="form-group">
                 <label for="password">Şifre</label>
@@ -77,6 +77,8 @@
 </div>
 
 </div>
+
+
 <!--<script>
     function scheduleAppointment(stylistId) {
         window.open("hesapaç.html");
@@ -89,6 +91,36 @@
 <!-- Javascript Files  -->
 
 <script  src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
+
+<script>
+  $(document).ready(function () {
+      $("#loginButton").click(function () {
+          var email = $("#email").val();
+          var sifre = $("#password").val();
+
+          // API Giriş İsteği
+          $.ajax({
+              type: "POST",
+              url: "http://127.0.0.1:8080/api/kuaforler", // API endpoint'i
+              data: {
+                  email: email,
+                  sifre: sifre
+              },
+              success: function (response) {
+                  // API'den başarılı bir yanıt alındığında yapılacak işlemler
+                  console.log("Başarılı giriş: ", response);
+
+                  // Başarılı giriş durumunda yönlendirme
+                  window.location.href = "Hesabim.html";
+              },
+              error: function (error) {
+                  // API'den hata yanıtı alındığında yapılacak işlemler
+                  console.error("Giriş hatası: ", error);
+              }
+          });
+      });
+  });
+</script>
 <script src="js/bootstrap.min.js" ></script>
 <script async deffer type="text/javascript" src="https://maps.google.com/maps/api/js?key= AIzaSyB52BfJHBtqiqYBn_D4ZUqujiWxAOiRyTc&callback=initMap"></script>
 <script src="js/gmap-custom.js" ></script>

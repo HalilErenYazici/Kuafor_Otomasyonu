@@ -11,16 +11,16 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="admin")
-public class Admin {
+@Table(name="randevu")
+public class Randevu {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id ;
-    private String adsoyad;
-    private String sifre;
+        private String Musteriisim;
+    private String KuaforAd;
+    private String islem;
+    private String gun;
+    private String saat;
+    private String onay;
 
-    @Column(nullable = false,unique = true)
-
-
-    private String email;
 }

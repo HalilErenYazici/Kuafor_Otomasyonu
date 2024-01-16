@@ -1,6 +1,5 @@
 package com.example.kuaforrandevu.mapper;
 
-import com.example.kuaforrandevu.KuaforRandevuApplication;
 import com.example.kuaforrandevu.dto.KuaforDto;
 import com.example.kuaforrandevu.entity.Kuafor;
 
@@ -11,6 +10,8 @@ public class KuaforMapper {
                 kuafor.getIsim(),
                 kuafor.getSoyisim(),
                 kuafor.getSifre(),
+                kuafor.getSaat(),
+
                 kuafor.getEposta()
         );
     }
@@ -21,8 +22,11 @@ public class KuaforMapper {
                 kuaforDto.getIsim(),
                 kuaforDto.getSoyisim(),
                 kuaforDto.getSifre(),
-
+                kuaforDto.getSaat(),
                 kuaforDto.getEposta()
         );
     }
+
+
+
 }
