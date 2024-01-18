@@ -83,7 +83,7 @@ Bu sayfada müşteri giriş yaptıktan sonra göreceği kısım kendi bilgileri 
 ![Profil Resmi 2](resim/profil2.png)
 
 <h1>Diagram</h1>
-![Profil Resmi 2](resim/diagram.png)
+![diagram](resim/diagram.png)
 
 ## Ekip Üyeleri:
 
