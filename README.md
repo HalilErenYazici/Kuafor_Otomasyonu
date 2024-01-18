@@ -23,7 +23,7 @@ Kuafor_Otomasyonu
             <li>İletişim Formu: Müşterilerin sorularını iletebilecekleri bir iletişim formu oluşturulacak.</li>
         </ul>
     </section>
-h3> Genel Bakış: <h3>
+<h3> Genel Bakış: <h3>
 
 <h6> Kuaför Web otomasyonumuz müşteri ve kuaför arasındaki her türlü işlemi yapabilecek, verileri saklayabilecek son derece basit ve sade bir kullanıma sahip web destekli bir uygulamadır. <h6>  
   <h4> Anasayfa Ekranı: <h4>
@@ -60,19 +60,15 @@ h3> Genel Bakış: <h3>
 <h6> Burada kuaför, müşterinin ve bize ulasının bilgilerini tutarız.Kuaför ve müsteri ekleme yaparız,kuaför güncelleme yaparız<h6>
   
   ![](resim/giris.png)
+ 
   <h4> Kuaför sayfamız <h4>
 
 <h6> Burada kuaför, randevuları siler ve günceller<h6>
   
   ![](resim/giris.png)
-  <h4> Kuaför sayfamız <h4>
+ <h4> Burası randevu sayfamızdır <h4>
 
-<h6> Burada kuaför, randevuları siler ve günceller<h6>
-  
-  ![](resim/giris.png)
- <h4> Kuaför sayfamız <h4>
-
-<h6> Burada kuaför, randevuları siler ve günceller<h6>
+<h6> Randevu aldıgımız sayfadır hangi gün hangi saatte onu seceriz<h6>
   
   ![](resim/giris.png)  
   <h4> Hesabım sayfamız <h4>
