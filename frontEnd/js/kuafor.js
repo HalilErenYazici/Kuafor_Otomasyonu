@@ -1,3 +1,5 @@
+// your-script.js
+
 $(document).ready(function () {
     function refreshTable() {
         $.ajax({
@@ -31,6 +33,7 @@ $(document).ready(function () {
 
                 $('.successBtn').click(function () {
                     const kullaniciId = $(this).data('id');
+                    console.log('successBtn clicked with id:', kullaniciId);
                     updateBackground(kullaniciId);
                 });
             },
@@ -55,8 +58,13 @@ $(document).ready(function () {
     }
 
     function updateBackground(id) {
-        // Sadece arka plan rengini yeşil yap
-        $(`tr[data-id="${id}"]`).css('background-color', '#00FF00'); // Yeşil renk
+        console.log('updateBackground called with id:', id);
+    
+        // Tüm satırların arka plan rengini temizle
+        $('tr[data-id]').removeClass('highlighted');
+    
+        // Sadece tıklanan satırın arka plan rengini güncelle
+        $(`tr[data-id="${id}"]`).addClass('highlighted');
     }
 
     refreshTable();
