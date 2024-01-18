@@ -8,9 +8,9 @@ $(document).ready(function () {
                 console.log(json);
 
                 const kullaniciListesiHTML = json.map(kullanici => `
-                    <tr>
-                        <td>${kullanici.Musteriisim}</td>
-                        <td>${kullanici.KuaforAd}</td>
+                    <tr data-id="${kullanici.id}">
+                        <td>${kullanici.musteriisim}</td>
+                        <td>${kullanici.kuaforAd}</td>
                         <td>${kullanici.islem}</td>
                         <td>${kullanici.gun}</td>
                         <td>${kullanici.saat}</td>
@@ -31,7 +31,7 @@ $(document).ready(function () {
 
                 $('.successBtn').click(function () {
                     const kullaniciId = $(this).data('id');
-                    updateOnayField(kullaniciId);
+                    updateBackground(kullaniciId);
                 });
             },
             error: function (error) {
@@ -53,28 +53,11 @@ $(document).ready(function () {
             }
         });
     }
-    function updateOnayField(id) {
-        const updateData = { onay: 'onaylandı' };
-    
-        console.log('Güncellenecek Kullanıcı ID:', id);
-        console.log('Güncellenen Veri:', updateData);
-    
-        $.ajax({
-            url: `http://localhost:8080/api/randevu/${id}`,
-            type: 'PUT',
-            contentType: 'application/json',
-            data: JSON.stringify(updateData),
-            success: function () {
-                console.log(`Kullanıcı ID ${id} onaylandı.`);
-                refreshTable();
-            },
-            error: function (xhr, textStatus, errorThrown) {
-                console.error(`Onay güncelleme hatası:`, xhr.responseJSON.message);
-            }
-        });
+
+    function updateBackground(id) {
+        // Sadece arka plan rengini yeşil yap
+        $(`tr[data-id="${id}"]`).css('background-color', '#00FF00'); // Yeşil renk
     }
-    
-    
-    
+
     refreshTable();
 });

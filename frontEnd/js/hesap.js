@@ -91,3 +91,43 @@ $(document).ready(function () {
     refreshTable();
 
 });
+$(document).ready(function () {
+    function refreshTable() {
+        $.ajax({
+            url: 'http://127.0.0.1:8080/api/randevu',
+            type: 'GET',
+            dataType: 'json',
+            success: function (json) {
+                console.log(json);
+  
+                const kullaniciListesiHTML = json.map(kullanici => `
+                    <tr>
+                        <td>${kullanici.musteriisim}</td>
+                        <td>${kullanici.kuaforAd}</td>
+                        <td>${kullanici.islem}</td>
+                        <td>${kullanici.gun}</td>
+                        <td>${kullanici.saat}</td>
+                        <td>${kullanici.onay}</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm deleteBtn" data-id="${kullanici.id}">X</button>
+                            <button class="btn btn-success btn-sm successBtn" data-id="${kullanici.id}">V</button>
+                        </td>
+                    </tr>
+                `).join('');
+  
+                $('#randevueliste').html(kullaniciListesiHTML);
+  
+            },
+            error: function (error) {
+                console.error('Veri çekme hatası:', error);
+            }
+        });
+    }
+  
+    
+    
+    
+    
+    
+    refreshTable();
+  });

@@ -70,7 +70,21 @@
                 <label for="password">Şifre</label>
                 <input type="password" class="form-control" id="password" placeholder="Şifre">
             </div>
-            <button type="submit" id="loginButton" href="Anasayfa.html"  class="btn btn-dark btn-block">Giriş Yap</button>
+            <label>
+              <input type="radio" name="rol" value="Admin">
+              Admin
+          </label>
+          <label>
+              <input type="radio" name="rol" value="Musteri">
+              Müşteri
+          </label>
+          <label>
+              <input type="radio" name="rol" value="Kuafor">
+              Kuaför
+          </label>           
+           <button type="submit" id="loginButton" href="Anasayfa.html"  class="btn btn-dark btn-block">Giriş Yap</button>
+           <button type="submit" id="loginbtn"   class="btn btn-dark btn-block">Giriş Yap</button>
+
             <button type="submit" class="btn btn-outline-secondary btn-block" onclick="scheduleAppointment('X')">Bir Hesabın Yok Mu? Hesap Aç</button>
         </form>
     </div>
@@ -125,7 +139,7 @@
 <script async deffer type="text/javascript" src="https://maps.google.com/maps/api/js?key= AIzaSyB52BfJHBtqiqYBn_D4ZUqujiWxAOiRyTc&callback=initMap"></script>
 <script src="js/gmap-custom.js" ></script>
 <script src="js/core.js"></script>
-<script src="js/giris.js"></script>
+<script src="js/giris2.js"></script>
 
 </body>
 </html>
