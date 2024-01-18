@@ -15,7 +15,6 @@
 </head>
 <body>
 
-<!-- Page loading animation -->
 <div class="loader loader-bg">
     <div class="loader-inner ball-pulse">
         <div></div>
@@ -63,25 +62,20 @@
         <br>
         <h1 class="text-center text-dark">Kuaför Sayfası</h1>
 
-    <!-- Kuaför Bilgileri -->
 <div class="container mt-5">
     <h2 class="text-center mb-4">Kuaför Çalışma Saatleri</h2>
 
-    <!-- Güncelle Butonu -->
     <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#saatGuncelleModal">
         Çalışma Saatlerini Güncelle
     </button>
 
-    <!-- Kuaför Çalışma Saatleri -->
     <div class="card">
         <div class="card-body">
-            <!-- Burada kuaförün çalışma saatleri görüntülenebilir -->
-            <!-- Örneğin: Pazartesi - Cuma: 09:00 - 18:00 -->
+           
         </div>
     </div>
 </div>
 
-<!-- Çalışma Saatleri Güncelleme Modalı -->
 <div class="modal fade" id="saatGuncelleModal" tabindex="-1" role="dialog" aria-labelledby="saatGuncelleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -92,13 +86,11 @@
                 </button>
             </div>
             <div class="modal-body">
-                <!-- Çalışma Saatleri Güncelleme Formu -->
                 <form>
                     <div class="mb-3">
                         <label for="pazartesiSaatleri" class="form-label">Pazartesi Saatleri:</label>
                         <input type="text" class="form-control" id="pazartesiSaatleri" placeholder="Örneğin: 09:00 - 18:00">
                     </div>
-                    <!-- Diğer günler için benzer şekilde inputlar ekleyebilirsiniz -->
 
                     <button type="button" class="btn btn-primary" onclick="saatleriGuncelle()">Güncelle</button>
                 </form>
@@ -109,14 +101,7 @@
 
 <script>
     function saatleriGuncelle() {
-        // Bu fonksiyon, formdan alınan verilerle çalışma saatlerini güncelleyebilir
-        // Verileri almak için gerekli jQuery kodunu buraya ekleyebilirsiniz
-        // Örneğin: const pazartesiSaatleri = $('#pazartesiSaatleri').val();
-        
-        // Güncelleme işlemleri burada yapılabilir
-
-        // Güncelleme tamamlandıktan sonra modalı kapat
-        $('#saatGuncelleModal').modal('hide');
+  
     }
 </script>
 
@@ -144,7 +129,6 @@
                                     </tr>
                                 </thead>
                                 <tbody id="randevueliste" style="max-height: 70vh;overflow-y: scroll;">
-                                    <!-- bize ulas listesi gelecek-->
                                 </tbody>
                             </table>
                         </div>
@@ -155,7 +139,6 @@
     </div>
 
 
-<!-- Bootstrap JS (Optional) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

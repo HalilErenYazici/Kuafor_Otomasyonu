@@ -1,18 +1,16 @@
 $('#loginbtn').on('click', function(event) {
-    event.preventDefault(); // Formun doğrudan submit olmasını engeller
+    event.preventDefault(); 
 
     var enteredUsername = $('#eposta').val();
     var enteredPassword = $('#password').val();
 
-    // Kullanıcı adı veya şifre boşsa uyarı ver ve işlemi sonlandır
     if (enteredUsername === '' || enteredPassword === '') {
         alert('Kullanıcı adı veya şifre boş olamaz.');
         return;
     }
 
-    // Admin girişi kontrolü
     $.ajax({
-        url: 'http://localhost:8080/api/admin', // Admin bilgilerini çekeceğiniz endpoint
+        url: 'http://localhost:8080/api/admin', 
         type: 'GET',
         success: function(adminResponse) {
             var isAdmin = adminResponse.some(function(admin) {
@@ -21,9 +19,8 @@ $('#loginbtn').on('click', function(event) {
 
             if (isAdmin) {
                 alert('Admin girişi başarılı!');
-                window.open('Admin.html', '_blank'); // Yeni sekmede admin sayfasını açma
+                window.open('Admin.html', '_blank'); 
             } else {
-                // Admin değilse, müşteri girişi kontrolü
                 $.ajax({
                     url: 'http://localhost:8080/api/musteriler',
                     type: 'GET',
@@ -34,9 +31,8 @@ $('#loginbtn').on('click', function(event) {
 
                         if (isMusteri) {
                             alert('Müşteri girişi başarılı!');
-                            window.open('Hesabim.html', '_blank'); // Yeni sekmede müşteri sayfasını açma
+                            window.open('Hesabim.html', '_blank'); 
                         } else {
-                            // Müşteri değilse, kuaför girişi kontrolü
                             $.ajax({
                                 url: 'http://localhost:8080/api/kuaforler',
                                 type: 'GET',
@@ -47,7 +43,7 @@ $('#loginbtn').on('click', function(event) {
 
                                     if (isKuafor) {
                                         alert('Kuaför girişi başarılı!');
-                                        window.open('Kuafor.html', '_blank'); // Yeni sekmede kuaför sayfasını açma
+                                        window.open('Kuafor.html', '_blank'); 
                                     } else {
                                         alert('Kullanıcı bulunamadı veya şifre yanlış!');
                                     }

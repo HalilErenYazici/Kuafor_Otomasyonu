@@ -27,14 +27,8 @@ $(document).ready(function () {
         });
     });
 
-    // Burada birinci document.ready fonksiyonu kapatılıyor
-
-    // İkinci document.ready fonksiyonu başlatılıyor
-   //document.ready fonksiyonu kapatılıyor
-
-    // Burada başka kodlar olabilir...
-
-}); // En dıştaki document.ready fonksiyonu kapatılıyor
+ 
+}); 
 $(document).ready(function () {
     function refreshTable() {
         $.ajax({

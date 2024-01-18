@@ -14,7 +14,6 @@
 <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
 <body>
 
-<!-- Page loading animation -->
 <div class="loader loader-bg">
 	<div class="loader-inner ball-pulse">
 		<div></div>
@@ -90,7 +89,6 @@
 
 
 
-<!-- Javascript Files  -->
 
 <script  src="https://code.jquery.com/jquery-3.2.1.min.js" ></script>
 
@@ -103,20 +101,17 @@
           // API Giriş İsteği
           $.ajax({
               type: "POST",
-              url: "http://127.0.0.1:8080/api/kuaforler", // API endpoint'i
+              url: "http://127.0.0.1:8080/api/kuaforler", // 'i
               data: {
                   email: email,
                   sifre: sifre
               },
               success: function (response) {
-                  // API'den başarılı bir yanıt alındığında yapılacak işlemler
                   console.log("Başarılı giriş: ", response);
 
-                  // Başarılı giriş durumunda yönlendirme
                   window.location.href = "Hesabim.html";
               },
               error: function (error) {
-                  // API'den hata yanıtı alındığında yapılacak işlemler
                   console.error("Giriş hatası: ", error);
               }
           });

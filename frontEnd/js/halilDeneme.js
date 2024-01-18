@@ -49,6 +49,8 @@ $(document).ready(function () {
                 console.log('Yeni kullanıcı eklendi.');
                 alert("Hesabınız Başarıyla Oluşturuldu! Devam Etmek İçin Tıkla.");
                 window.close();
+                window.open('index.html', '_blank'); 
+
                 refreshTable();
             },
             error: function (xhr, textStatus, errorThrown) {
