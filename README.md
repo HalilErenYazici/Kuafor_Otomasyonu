@@ -30,6 +30,7 @@ Kuafor_Otomasyonu
 <h6> Anasayfada randevular, iletisim, hakkımızda, giris ve hesap ac sayfalarına erişim sağlanır. <h6>
 
 ![Anasayfa Resmi 1](resim/anasayfa.png) ![Anasayfa Resmi 2](resim/anasayfa2.png)
+![Anasayfa Resmi 3](resim/anasayfa3.png) ![Anasayfa Resmi 4](resim/anasayfa4.png)
 
 <h4> Hakkımızda Sayfası: <h4>
 
@@ -48,8 +49,8 @@ Kuafor_Otomasyonu
 
 <h6> müsteriler sisteme kayıt oldugu kısımdır<h6>
   
-  ![](resim/giris.png)
-  ![](resim/iletisim.png)  
+  ![](resim/hesapac.png)
+   
 <h4> Giriş sayfamız: <h4>
 
 <h6> Bu sayfamızda üye bilgilerimizi gireriz eger admin sek admin e atar,müşteriysek müsteri sayfamıza,eger kuaförsek kuaför sayfamıza<h6>
@@ -59,21 +60,31 @@ Kuafor_Otomasyonu
 
 <h6> Burada kuaför, müşterinin ve bize ulasının bilgilerini tutarız.Kuaför ve müsteri ekleme yaparız,kuaför güncelleme yaparız<h6>
   
-  ![](resim/giris.png)
+  ![](resim/admin1.png)
+    ![](resim/admin2.png)
+  ![](resim/admin3.png)
+  ![](resim/admin4.png)
+  ![](resim/admin5.png)
+  ![](resim/admin6.png)
+
  
   <h4> Kuaför sayfamız <h4>
 
 <h6> Burada kuaför, randevuları siler ve günceller<h6>
   
-  ![](resim/giris.png)
+  ![](resim/kuafor.png)
  <h4> Burası randevu sayfamızdır <h4>
 
 <h6> Randevu aldıgımız sayfadır hangi gün hangi saatte onu seceriz<h6>
   
-  ![](resim/giris.png)  
+  ![](resim/randevu.png)  
+    ![](resim/randevu2.png)  
+
   <h4> Hesabım sayfamız <h4>
 
 <h6> Burada müşteri giris yaptıktan sonra görücegi kısım kendi bilgileri ve randevu bilgilerini görür<h6>
   
-  ![](resim/giris.png) 
+  ![](resim/profil1.png) 
+    ![](resim/profil2.png) 
+
   
