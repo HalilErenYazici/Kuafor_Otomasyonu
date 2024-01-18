@@ -2,7 +2,7 @@
 
 ## Amaç ve Kapsam:
 
-Bu proje, bir kuaför salonunun online varlığını güçlendirmek ve müşteri deneyimini artırmak amacıyla tasarlanmış bir web sitesini içermektedir. Temel gayemiz, müşterilere hızlı ve kullanıcı dostu bir platform sunarak kuaför salonumuzun hizmetlerine erişimlerini kolaylaştırmak ve randevu sürecini optimize etmektir.
+<p>Bu proje, bir kuaför salonunun online varlığını güçlendirmek ve müşteri deneyimini artırmak amacıyla tasarlanmış bir web sitesini içermektedir. Temel gayemiz, müşterilere hızlı ve kullanıcı dostu bir platform sunarak kuaför salonumuzun hizmetlerine erişimlerini kolaylaştırmak ve randevu sürecini optimize etmektir.</p>
 
 ### Amaçlar:
 
@@ -81,6 +81,9 @@ Bu sayfada müşteri giriş yaptıktan sonra göreceği kısım kendi bilgileri 
 
 ![Profil Resmi 1](resim/profil1.png)
 ![Profil Resmi 2](resim/profil2.png)
+
+<h1>Diagram</h1>
+![Profil Resmi 2](resim/diagram.png)
 
 ## Ekip Üyeleri:
 
