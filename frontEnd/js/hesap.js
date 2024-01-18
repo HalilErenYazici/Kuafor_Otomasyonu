@@ -9,15 +9,20 @@ $(document).ready(function () {
                 console.log(kullanici);
 
                 const kullaniciHTML = `
-                    <p>Kullanıcı id : ${kullanici.id}</p>
+                <div class="row">
+                <div class="col-md-4"><p>Kullanıcı id : ${kullanici.id}</p>
                     <p>Kullanıcı Adı Soyadı : ${kullanici.musteriisim} ${kullanici.musterisoyisim}</p>
-                    <p style="font-size: 33px;">Kullanıcı Eposta: ${kullanici.eposta}</p>
+                    <p>Kullanıcı Eposta: ${kullanici.eposta}</p>
                     <p>Kullanıcı Sifre: ${kullanici.sifre}</p>
 
                     <p>
                         <button class="btn btn-danger btn-sm deleteBtn" data-id="${kullanici.id}">Sil</button>
                         <button class="btn btn-primary btn-sm editBtn" data-id="${kullanici.id}">Düzenle</button>
                     </p>
+                </div>
+                <div class="col-md-8"></div>
+                </div>
+                   
                 `;
 
                 $('#kullaniciListesi').html(kullaniciHTML);
