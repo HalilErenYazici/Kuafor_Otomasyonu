@@ -1,7 +1,4 @@
-# Kuafor_Otomasyonu
-Kuafor_Otomasyonu
-# Kuafor_Otomasyonu
-Kuafor_Otomasyonu
+
 <h1> Kuafor_Otomasyonu <h1>
 
 <h2> Amaç ve Kapsam: <h2>
@@ -87,4 +84,9 @@ Kuafor_Otomasyonu
   ![](resim/profil1.png) 
     ![](resim/profil2.png) 
 
-  
+
+  <h2>Ekip Üyeleri</h2>
+  <h4>Berkay Gürcan 132030022</h4>
+  <h4>Halil Eren Yazıcı 132030049</h4>
+<h4>Kadir Korkmaz 132030046</h4>
+<h4>Baha Can 131830066</h4>
